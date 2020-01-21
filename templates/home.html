@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<meta http-equiv="refresh" content="10">
+<div class="jumbotron">
+  <h1 class="display-5">
+  	{% if br == 0 %}
+  		Balance : {{cash}}
+  	{% else %}
+  		BANKRUPT
+  	{% endif %}	
+  	</h1>	
+<!--  <p class="lead">Mortage : {{mortage}}</p>  -->
+  <hr class="my-4">
+</div>
+
+{% endblock %}

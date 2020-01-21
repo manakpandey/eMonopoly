@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form  method=post>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">To</label>
+    <select class="form-control" id="exampleFormControlSelect1" name="username">
+      {% for m in mortage %}
+ 	    <option>{{p}}</option>
+ 	  {% endfor %}		
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Pay Mortage</button>
+</form>
+
+
+{% endblock %}

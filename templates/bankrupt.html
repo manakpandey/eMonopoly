@@ -1,0 +1,21 @@
+{% extends "banker.html" %}
+{% block content %}
+
+<form  method=post>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">To</label>
+    <select class="form-control" id="exampleFormControlSelect1" name="username">
+      {% for p in player %}
+      	{% if p != '' %}
+      	{% if br[i] != 1 %}
+ 	    <option>{{p}}</option>
+ 	    {% endif %}
+ 	  	{% endif %}
+ 	  {% endfor %}		
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Declare Bankrupt</button>
+</form>
+
+
+{% endblock %}	

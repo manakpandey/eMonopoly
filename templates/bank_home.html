@@ -1,0 +1,31 @@
+{% extends "banker.html" %}
+{% block content %}
+<meta http-equiv="refresh" content="1">
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Cash</th>
+   <!--   <th scope="col">Mortage</th> -->
+    </tr>
+  </thead>
+  <tbody>
+   {% for i in range(6) %}
+   		{% if player[i] != '' %}
+    <tr>
+      <th scope="row">{{i+1}}</th>
+      <td>{{player[i]}}</td>
+	      {% if br[i] == 1 %}
+	      	<td>Bankrupt</td>
+	      {% else %}	
+	      <td>{{cash[i]}}</td>
+	      {% endif %}
+    </tr>
+    	 {% endif %}		
+   {% endfor %}		
+
+  </tbody>
+</table>
+
+{% endblock %}		

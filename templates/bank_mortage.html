@@ -1,0 +1,23 @@
+{% extends "banker.html" %}
+{% block content %}
+
+<form  method=post>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">To</label>
+    <select class="form-control" id="exampleFormControlSelect1" name="username">
+      {% for p in player %}
+      	{% if p != '' %}
+ 	    <option>{{p}}</option>
+ 	  	{% endif %}
+ 	  {% endfor %}		
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="amount">Amount</label>
+    <input name="amount" class="form-control" id="amount" type="integer" required></input>
+  </div>
+  <button type="submit" class="btn btn-primary">Mortage</button>
+</form>
+
+
+{% endblock %}	
